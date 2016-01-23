@@ -1,0 +1,33 @@
+<!-- $Id: login_box.html,v 1.4 2007/12/19 01:44:51 sean3z Exp $ //-->
+<div class="panel">
+	<div class="inner">
+		<span class="corners-top"><span></span></span>
+		
+		<font color="red"><b>You are not logged in. Please do so to continue.</b></font>
+		
+		<span class="corners-bottom"><span></span></span>
+</div>
+</div>
+
+<div class="panel">
+	<div class="inner">
+		<span class="corners-top"><span></span></span>
+		
+	<form method="post" action="ucp.php?mode=login" class="headerspace">
+	{S_FORM_TOKEN}
+	<h3><a href="{U_LOGIN_LOGOUT}">{L_LOGIN_LOGOUT}</a>&nbsp; &bull; &nbsp;<a href="{U_REGISTER}">{L_REGISTER}</a></h3>
+		<fieldset class="quick-login">
+			<label for="username">{L_USERNAME}:</label>&nbsp;<input type="text" name="username" id="username" size="10" class="inputbox" title="{L_USERNAME}" />  
+			<label for="password">{L_PASSWORD}:</label>&nbsp;<input type="password" name="password" id="password" size="10" class="inputbox" title="{L_PASSWORD}" />
+			<!-- IF S_AUTOLOGIN_ENABLED -->
+				| <label for="autologin">{L_LOG_ME_IN} <input type="checkbox" name="autologin" id="autologin" /></label>
+			<!-- ENDIF -->
+			<input name="redirect" value="challenges.php" type="hidden">
+			<input type="submit" name="login" value="{L_LOGIN}" class="button2" />
+		</fieldset>
+	</form>
+	<br />
+			
+<span class="corners-bottom"><span></span></span>
+</div>
+</div>
